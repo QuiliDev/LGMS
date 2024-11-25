@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Menú con jQuery y CSS</title> 
+    <link rel="stylesheet" href="menujQuery.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Script para manejar la interacción del menú -->
+    <script>
+    $(document).ready(function() {
+    // Maneja el evento de pasar el cursor sobre las opciones principales del menú
+    $('.menu li').hover(
+        function() {
+            // Muestra las subopciones con una animación
+            $(this).children('ul').stop(true, true).slideDown();
+        },
+        function() {
+            // Oculta las subopciones con una animación
+            $(this).children('ul').stop(true, true).slideUp();
+        }
+    );
+});
+
+    $(document).ready(function(){
+        // Funcion para cargar contenido con AJAX
+        function cargarContenido(url){
+            $.ajax({
+                url: url,
+                method: 'GET',
+                dataType: 'html',
+                success: function(data){
+                    $('#contenido').html(data);
+                },
+                error: function(){
+                    $('#contenido').html('Error al cargar el contenido');
+                }
+            });
+
+        }
+        // Manejar click en elementos del menu
+        $('nav li').on('click', function(){
+            var url = $(this).data('url'); // Obtener la URL del archivo a cargar
+             cargarContenido(url);// Cargar el contenido
+        });
+    
+        // Cargar contenido predeterminado al cargar la pagina
+        cargarContenido($('nav li').first().data('url'));
+    });
+    </script>
+</head>
+<body>
+    <!-- Contenedor principal del menú -->
+    <nav class="menu">
+        <ul>
+            <!-- Opción principal sin subopciones -->
+            <li>Inicio</li>
+
+            <!-- Opción con subopciones -->
+            <li>
+                Opción 1
+                <ul>
+                    <li>Subopción 1.1</li>
+                    <li>Subopción 1.2</li>
+                </ul>
+            </li>
+
+            <!-- Opción con subopciones -->
+            <li>
+                Opción 2
+                <ul>
+                    <li>Subopción 2.1</li>
+                    <li>Subopción 2.2</li>
+                </ul>
+            </li>
+
+            <!-- Opción con subopciones -->
+            <li>
+                Opción 3
+                <ul>
+                    <li>Subopción 3.1</li>
+                    <li>Subopción 3.2</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

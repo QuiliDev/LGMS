@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* Estilos para el menú */
+.menu {
+    background-color: navy;
+    color: white;
+}
+
+/* Elimina viñetas y ajusta el espaciado de las listas */
+.menu ul {
+    list-style: none; /* Sin puntos o viñetas */
+    padding: 0; /* Sin relleno */
+    margin: 0; /* Sin márgenes */
+    display: inline-flex; /* Muestra las opciones en fila */
+}
+/* Estilos para las opciones principales del menú */
+.menu > ul > li {
+    position: relative;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+/* Submenús (ocultos inicialmente) */
+.menu ul ul {
+    display: none; /* Ocultar submenú */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 100%; /* Alineación a la parte inferior del menú */
+    left: 0; /* Alineación a la izquierda */
+    color: navy;
+    background-color: white;
+    flex-direction: column; /* Opciones en columna */
+    min-width: 150px; /* Ancho mínimo del submenú */
+}
+
+.menu ul ul li {
+    padding: 10px 15px; /* Espaciado interior de los submenús */
+    border-bottom: 1px solid white; /* Línea divisoria */
+}
+
+.menu ul ul li:hover {
+    background-color: navy; 
+    color: white;
+}
+
+.menu > ul > li:hover {
+    background-color: navy;
+}
+
