@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Propiedades Flexbox</title>
+  <style>
+    /* Estilos generales que ya tienes */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    h2, h3 {
+      margin: 20px 0 10px;
+      color: #333;
+    }
+    .section {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    .flex-container {
+      display: flex; /* Aseguramos que sea un contenedor flex */
+      flex-direction: row; /* Fuerza alineación horizontal */
+      background-color: #f2f2f2;
+      margin: 10px 0;
+      padding: 10px;
+      gap: 10px;
+      border: 1px solid #333;
+    }
+    .flex-item {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    .inline-flex-container {
+      display: inline-flex;
+      gap: 10px;
+      background-color: #f2f2f2;
+      margin: 10px 0;
+      padding: 10px;
+      max-width: max-content;
+      border: 1px solid #333;
+    }
+  
+    /* Nuevos estilos sugeridos */
+  
+    /* Aumenta el tamaño de los contenedores con width para mostrar flex-grow y flex-shrink mejor */
+    .flex-container[style*="width: 300px"],
+    .flex-container[style*="width: 100%"] {
+      border: 1px dashed #333;
+    }
+  
+    /* Espacio adicional para demostrar propiedades flex-grow, flex-shrink, y align-self */
+    .flex-container[style*="height: 150px"],
+    .flex-container[style*="height: 200px"] {
+      min-height: 150px;
+    }
+  
+    /* Ensancha los elementos para mostrar mejor flex-grow */
+    .flex-item[style*="flex-grow"],
+    .flex-item[style*="flex-basis"] {
+      min-width: 80px;
+    }
+  
+    /* Destaca los elementos con align-self para visualizar el cambio */
+    .flex-item[style*="align-self: flex-start"],
+    .flex-item[style*="align-self: flex-end"],
+    .flex-item[style*="align-self: center"] {
+      background-color: #FF5733; /* Color diferente para destacar */
+    }
+  </style>
+  
+</head>
+<body>
+
+  <h1>Ejemplos de Propiedades Flexbox</h1>
+
+  <!-- display: flex | inline-flex -->
+  <div class="section">
+    <h2>display: flex | inline-flex</h2>
+    <h3>display: flex</h3>
+    <div class="flex-container">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+
+    <h3>display: inline-flex</h3>
+    <divclass= class="inline-flex-container">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </divclass=>
+  </div>
+
+  <!-- flex-direction -->
+  <div class="section">
+    <h2>flex-direction</h2>
+
+    <h3>row (predeterminado)</h3>
+    <div class="flex-container" style="flex-direction: row;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+
+    <h3>row-reverse</h3>
+    <div class="flex-container" style="flex-direction: row-reverse;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+
+    <h3>column</h3>
+    <div class="flex-container" style="flex-direction: column;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+
+    <h3>column-reverse</h3>
+    <div class="flex-container" style="flex-direction: column-reverse;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </div>
+
+  <!-- justify-content -->
+  <div class="section">
+    <h2>justify-content</h2>
+
+    <h3>flex-start</h3>
+    <div class="flex-container" style="justify-content: flex-start;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+
+    <h3>flex-end</h3>
+    <div class="flex-container" style="justify-content: flex-end;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+
+    <h3>center</h3>
+    <div class="flex-container" style="justify-content: center;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+
+    <h3>space-between</h3>
+    <div class="flex-container" style="justify-content: space-between;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+
+    <h3>space-around</h3>
+    <div class="flex-container" style="justify-content: space-around;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+
+    <h3>space-evenly</h3>
+    <div class="flex-container" style="justify-content: space-evenly;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </div>
+
+  <!-- align-items -->
+  <div class="section">
+    <h2>align-items</h2>
+
+    <h3>flex-start</h3>
+    <div class="flex-container" style="align-items: flex-start; height: 100px;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+
+    <h3>flex-end</h3>
+    <div class="flex-container" style="align-items: flex-end; height: 100px;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+
+    <h3>center</h3>
+    <div class="flex-container" style="align-items: center; height: 100px;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+
+    <h3>baseline</h3>
+    <div class="flex-container" style="align-items: baseline; height: 100px;">
+      <div class="flex-item" style="font-size: 24px;">Item 1</div>
+      <div class="flex-item" style="font-size: 18px;">Item 2</div>
+      <div class="flex-item" style="font-size: 14px;">Item 3</div>
+    </div>
+
+    <h3>stretch</h3>
+    <div class="flex-container" style="align-items: stretch; height: 100px;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </div>
+
+  <!-- flex-wrap -->
+  <div class="section">
+    <h2>flex-wrap</h2>
+
+    <h3>nowrap</h3>
+    <div class="flex-container" style="flex-wrap: nowrap; width: 300px;">
+      <div class="flex-item" style="width: 150px;">Item 1</div>
+      <div class="flex-item" style="width: 150px;">Item 2</div>
+      <div class="flex-item" style="width: 150px;">Item 3</div>
+    </div>
+
+    <h3>wrap</h3>
+    <div class="flex-container" style="flex-wrap: wrap; width: 300px;">
+      <div class="flex-item" style="width: 150px;">Item 1</div>
+      <div class="flex-item" style="width: 150px;">Item 2</div>
+      <div class="flex-item" style="width: 150px;">Item 3</div>
+      <div class="flex-item" style="width: 150px;">Item 4</div>
+    </div>
+
+    <h3>wrap-reverse</h3>
+    <div class="flex-container" style="flex-wrap: wrap-reverse; width: 300px;">
+      <div class="flex-item" style="width: 150px;">Item 1</div>
+      <div class="flex-item" style="width: 150px;">Item 2</div>
+      <div class="flex-item" style="width: 150px;">Item 3</div>
+      <div class="flex-item" style="width: 150px;">Item 4</div>
+    </div>
+  </div>
+
+  <!-- align-content -->
+  <div class="section">
+    <h2>align-content</h2>
+
+    <h3>flex-start</h3>
+    <div class="flex-container" style="flex-wrap: wrap; align-content: flex-start; height: 200px;">
+      <div class="flex-item" style="width: 100px;">Item 1</div>
+      <div class="flex-item" style="width: 100px;">Item 2</div>
+      <div class="flex-item" style="width: 100px;">Item 3</div>
+      <div class="flex-item" style="width: 100px;">Item 4</div>
+    </div>
+
+    <h3>flex-end</h3>
+    <div class="flex-container" style="flex-wrap: wrap; align-content: flex-end; height: 200px;">
+      <div class="flex-item" style="width: 100px;">Item 1</div>
+      <div class="flex-item" style="width: 100px;">Item 2</div>
+      <div class="flex-item" style="width: 100px;">Item 3</div>
+      <div class="flex-item" style="width: 100px;">Item 4</div>
+    </div>
+
+    <h3>center</h3>
+    <div class="flex-container" style="flex-wrap: wrap; align-content: center; height: 200px;">
+      <div class="flex-item" style="width: 100px;">Item 1</div>
+      <div class="flex-item" style="width: 100px;">Item 2</div>
+      <div class="flex-item" style="width: 100px;">Item 3</div>
+      <div class="flex-item" style="width: 100px;">Item 4</div>
+    </div>
+
+    <h3>space-between</h3>
+    <div class="flex-container" style="flex-wrap: wrap; align-content: space-between; height: 200px;">
+      <div class="flex-item" style="width: 100px;">Item 1</div>
+      <div class="flex-item" style="width: 100px;">Item 2</div>
+      <div class="flex-item" style="width: 100px;">Item 3</div>
+      <div class="flex-item" style="width: 100px;">Item 4</div>
+    </div>
+
+    <h3>space-around</h3>
+    <div class="flex-container" style="justify-content: space-around;">
+      <div class="flex-item" style="width: 100px;">Item 1</div>
+      <div class="flex-item" style="width: 100px;">Item 2</div>
+      <div class="flex-item" style="width: 100px;">Item 3</div>
+      <div class="flex-item" style="width: 100px;">Item 4</div>
+    </div>
+
+    <h3>space-evenly</h3>
+    <div class="flex-container" style="justify-content: space-evenly;">
+      <div class="flex-item" style="width: 100px;">Item 1</div>
+      <div class="flex-item" style="width: 100px;">Item 2</div>
+      <div class="flex-item" style="width: 100px;">Item 3</div>
+      <div class="flex-item" style="width: 100px;">Item 4</div>
+    </div>
+  </div>
+
+    <!-- flex-grow -->
+    <div class="section">
+      <h2>flex-grow</h2>
+      
+      <h3>flex-grow: 0 (predeterminado)</h3>
+      <div class="flex-container">
+        <div class="flex-item" style="flex-grow: 0;">Item 1</div>
+        <div class="flex-item" style="flex-grow: 0;">Item 2</div>
+        <div class="flex-item" style="flex-grow: 0;">Item 3</div>
+      </div>
+  
+      <h3>flex-grow: 1</h3>
+      <div class="flex-container">
+        <div class="flex-item" style="flex-grow: 1;">Item 1</div>
+        <div class="flex-item" style="flex-grow: 1;">Item 2</div>
+        <div class="flex-item" style="flex-grow: 1;">Item 3</div>
+      </div>
+  
+      <h3>flex-grow: 2</h3>
+      <div class="flex-container">
+        <div class="flex-item" style="flex-grow: 1;">Item 1</div>
+        <div class="flex-item" style="flex-grow: 2;">Item 2</div>
+        <div class="flex-item" style="flex-grow: 1;">Item 3</div>
+      </div>
+    </div>
+  
+<!-- flex-shrink -->
+<div class="section">
+  <h2>flex-shrink</h2>
+  
+  <h3>flex-shrink: 1 (predeterminado)</h3>
+  <div class="flex-container" style="width: 200px; flex-direction: row;">
+    <div class="flex-item" style="width: 150px; flex-shrink: 1;">Item 1</div>
+    <div class="flex-item" style="width: 150px; flex-shrink: 1;">Item 2</div>
+    <div class="flex-item" style="width: 150px; flex-shrink: 1;">Item 3</div>
+  </div>
+
+  <h3>flex-shrink: 0</h3>
+  <div class="flex-container" style="width: 200px; flex-direction: row;">
+    <div class="flex-item" style="width: 150px; flex-shrink: 0;">Item 1</div>
+    <div class="flex-item" style="width: 150px; flex-shrink: 0;">Item 2</div>
+    <div class="flex-item" style="width: 150px; flex-shrink: 0;">Item 3</div>
+  </div>
+</div>
+
+  
+    <!-- flex-basis -->
+    <div class="section">
+      <h2>flex-basis</h2>
+      
+      <h3>flex-basis: 100px</h3>
+      <div class="flex-container">
+        <div class="flex-item" style="flex-basis: 100px;">Item 1</div>
+        <div class="flex-item" style="flex-basis: 100px;">Item 2</div>
+        <div class="flex-item" style="flex-basis: 100px;">Item 3</div>
+      </div>
+  
+      <h3>flex-basis: 150px</h3>
+      <div class="flex-container">
+        <div class="flex-item" style="flex-basis: 150px;">Item 1</div>
+        <div class="flex-item" style="flex-basis: 150px;">Item 2</div>
+        <div class="flex-item" style="flex-basis: 150px;">Item 3</div>
+      </div>
+    </div>
+  
+    <!-- order -->
+    <div class="section">
+      <h2>order</h2>
+      
+      <h3>order: predeterminado (0)</h3>
+      <div class="flex-container">
+        <div class="flex-item" style="order: 0;">Item 1</div>
+        <div class="flex-item" style="order: 0;">Item 2</div>
+        <div class="flex-item" style="order: 0;">Item 3</div>
+      </div>
+  
+      <h3>order: 1, -1, 2</h3>
+      <div class="flex-container">
+        <div class="flex-item" style="order: 1;">Item 1</div>
+        <div class="flex-item" style="order: -1;">Item 2</div>
+        <div class="flex-item" style="order: 2;">Item 3</div>
+      </div>
+    </div>
+  
+    <!-- align-self -->
+    <div class="section">
+      <h2>align-self</h2>
+  
+      <h3>align-self: flex-start</h3>
+      <div class="flex-container" style="align-items: center; height: 150px;">
+        <div class="flex-item" style="align-self: flex-start;">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+      </div>
+  
+      <h3>align-self: flex-end</h3>
+      <div class="flex-container" style="align-items: center; height: 150px;">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item" style="align-self: flex-end;">Item 2</div>
+        <div class="flex-item">Item 3</div>
+      </div>
+  
+      <h3>align-self: center</h3>
+      <div class="flex-container" style="align-items: flex-start; height: 150px;">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item" style="align-self: center;">Item 2</div>
+        <div class="flex-item">Item 3</div>
+      </div>
+    </div>
+  
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maquetación Web con Grid y Flexbox - Ejemplo</title>
+  <style>
+    /* Estilos básicos */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilos para cada área */
+    .header {
+      grid-area: header;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header h1 {
+      font-size: 1.5em;
+    }
+
+    .nav {
+      grid-area: nav;
+      background-color: #4CAF50;
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      background-color: #388E3C;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .nav a:hover {
+      background-color: #2E7D32;
+    }
+
+    .main {
+      grid-area: main;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .aside {
+      grid-area: aside;
+      background-color: #ddd;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .footer {
+      grid-area: footer;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-areas:
+          "header"
+          "nav"
+          "main"
+          "aside"
+          "footer";
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .main {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header con el logo y nombre del sitio -->
+    <header class="header">
+      <h1>Mi Sitio Web</h1>
+      <p>Subtítulo o lema del sitio</p>
+    </header>
+
+    <!-- Barra de navegación superior -->
+    <nav class="nav">
+      <a href="#">Inicio</a>
+      <a href="#">Servicios</a>
+      <a href="#">Portafolio</a>
+      <a href="#">Contacto</a>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="main">
+      <article class="card">
+        <h2>Artículo 1</h2>
+        <p>Contenido del artículo 1. Este es un ejemplo de tarjeta dentro del contenido principal.</p>
+      </article>
+      <article class="card">
+        <h2>Artículo 2</h2>
+        <p>Contenido del artículo 2. Otro ejemplo de tarjeta en el área principal.</p>
+      </article>
+      <article class="card">
+        <h2>Artículo 3</h2>
+        <p>Contenido del artículo 3. Aquí puedes añadir más secciones según tus necesidades.</p>
+      </article>
+    </main>
+
+    <!-- Barra lateral derecha -->
+    <aside class="aside">
+      <h2>Enlaces de Interés</h2>
+      <ul>
+        <li><a href="#">Enlace 1</a></li>
+        <li><a href="#">Enlace 2</a></li>
+        <li><a href="#">Enlace 3</a></li>
+      </ul>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2023 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+</body>
+</html>

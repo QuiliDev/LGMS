@@ -1,0 +1,183 @@
+*{
+    box-sizing: border-box;
+      font-family: Arial, sans-serif;
+}
+/*------HEADER-------*/
+.header{
+    height: 5em;
+    background-color: darkblue;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.3); /*0px es el offset X, 0px es el offset Y, 5px es el blur, 2px es el tamanio, rgba(0, 0, 0, 0.3) es el color*/
+}
+.nav{
+    display:flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+}
+.barnav{
+    list-style: none;
+    display: flex;
+    justify-content:flex-start;
+}
+.menu{
+    margin: 15px;
+}
+.logo_header{
+    height: 60px;
+    
+}
+.menu a{
+    text-decoration: none;
+    color: lightgreen;
+}
+.menu a:hover{
+    background-color: lightgreen;
+    color: lightblue;
+}
+/*------fin header-------*/
+
+
+/*------CONTENEDOR-------*/
+.contenedor{
+    background-color: white;
+    padding: 30px 15px 30px 15px;
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.3); /*0px es el offset X, 0px es el offset Y, 5px es el blur, 2px es el tamanio, rgba(0, 0, 0, 0.3) es el color*/
+    margin: 20px 0px 20px 0px; /*arriba derecha abajo izquierda*/
+}
+
+
+/*------fin contenedor-------*/
+
+/*------caja lista equipos-------*/
+
+.caja_lista_equipos{
+    background-color: orange;
+    margin: 20px 2px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.3); /*0px es el offset X, 0px es el offset Y, 5px es el blur, 2px es el tamanio, rgba(0, 0, 0, 0.3) es el color*/
+}
+
+/* .caja_equipos{
+    background-color: orange;
+    padding: 15px 15px 15px 15px;
+} */
+.caja_equipos li {
+    list-style-type: none;
+  }
+  
+  .caja_equipos li:before {
+    content: "@";
+  }
+  p{
+    line-height: 2;
+  }
+  hr {
+    border: none;
+    height: 1px;
+    background-color: black;
+    margin: 20px 0;
+  }
+
+/*------fin caja lista equipos-------*/
+
+/*------tabla-------*/
+
+.contenedor_clasificacion{
+    background-color: lightsalmon;
+    margin: 20px 2px;
+    padding: 30px 15px 30px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.3); /*0px es el offset X, 0px es el offset Y, 5px es el blur, 2px es el tamanio, rgba(0, 0, 0, 0.3) es el color*/
+}
+
+.contenedor_clasificacion h3, 
+.contenedor_clasificacion p{
+    color:red;
+}
+
+.tabla_clasificacion {
+    border: 5px solid red;
+    text-align: center;
+  }
+
+/* table{
+    border: 5px solid red;
+    
+}*/
+
+.tabla_clasificacion th{
+    background-color: navy;
+    color: white;
+    padding: 10px;
+} 
+
+.tabla_clasificacion tbody tr:nth-child(odd){
+    background-color: gray;
+}
+.tabla_clasificacion tbody tr:nth-child(even){
+    background-color: lightblue;
+}
+.tabla_clasificacion .escudo img{
+    width: 50px;
+}
+
+.tabla_clasificacion tr:nth-of-type(5) >td{
+    background-color:green;
+    color: white;
+}
+.tabla_clasificacion tbody a{
+    text-decoration: none;
+}
+/*------fin tabla-------*/
+
+
+/*------contenedor-multimedia-------*/
+
+.contenedor-multimedia{
+    margin: 20px 2px;
+    padding: 30px 15px 30px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.3); /*0px es el offset X, 0px es el offset Y, 5px es el blur, 2px es el tamanio, rgba(0, 0, 0, 0.3) es el color*/
+    display: flex;
+    gap: 20px;
+
+}
+.contenedor-multimedia .audio1 {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.3); /*0px es el offset X, 0px es el offset Y, 5px es el blur, 2px es el tamanio, rgba(0, 0, 0, 0.3) es el color*/
+    
+}
+.contenedor-multimedia .video   {
+    width: 600px;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.3); /*0px es el offset X, 0px es el offset Y, 5px es el blur, 2px es el tamanio, rgba(0, 0, 0, 0.3) es el color*/
+    
+}
+/*------fin contenedor-multimedia-------*/
+
+/*------FOOTER-------*/
+.footer{
+    background-color: darkgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 25px 0px 25px;
+    height: 6em;
+    color: lightblue;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.3); /*0px es el offset X, 0px es el offset Y, 5px es el blur, 2px es el tamanio, rgba(0, 0, 0, 0.3) es el color*/
+}
+.logo_footer{
+    height: 60px;
+}
+/*------fin footer-------*/

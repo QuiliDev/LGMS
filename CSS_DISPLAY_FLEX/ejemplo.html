@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Display Flex</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h2 {
+      margin-top: 30px;
+      color: #333;
+    }
+    .section {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    .flex-container {
+      display: flex;
+      background-color: #f2f2f2;
+      margin: 10px 0;
+      padding: 10px;
+      gap: 10px;
+    }
+    .flex-item {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ejemplos de Propiedades de Flexbox</h1>
+
+  <!-- display: flex -->
+  <div class="section">
+    <h2>display: flex</h2>
+    <div class="flex-container">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </div>
+
+  <!-- flex-direction -->
+  <div class="section">
+    <h2>flex-direction: column</h2>
+    <div class="flex-container" style="flex-direction: column;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </div>
+
+  <!-- justify-content -->
+  <div class="section">
+    <h2>justify-content: space-between</h2>
+    <div class="flex-container" style="justify-content: space-between;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </div>
+
+  <!-- align-items -->
+  <div class="section">
+    <h2>align-items: center</h2>
+    <div class="flex-container" style="align-items: center; height: 150px;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </div>
+
+  <!-- flex-wrap -->
+  <div class="section">
+    <h2>flex-wrap: wrap</h2>
+    <div class="flex-container" style="flex-wrap: wrap; width: 200px;">
+      <div class="flex-item" style="width: 100px;">Item 1</div>
+      <div class="flex-item" style="width: 100px;">Item 2</div>
+      <div class="flex-item" style="width: 100px;">Item 3</div>
+      <div class="flex-item" style="width: 100px;">Item 4</div>
+    </div>
+  </div>
+
+  <!-- align-content -->
+  <div class="section">
+    <h2>align-content: center</h2>
+    <div class="flex-container" style="flex-wrap: wrap; align-content: center; height: 200px;">
+      <div class="flex-item" style="width: 100px;">Item 1</div>
+      <div class="flex-item" style="width: 100px;">Item 2</div>
+      <div class="flex-item" style="width: 100px;">Item 3</div>
+      <div class="flex-item" style="width: 100px;">Item 4</div>
+    </div>
+  </div>
+
+  <!-- flex-grow -->
+  <div class="section">
+    <h2>flex-grow</h2>
+    <div class="flex-container">
+      <div class="flex-item" style="flex-grow: 1;">Item 1</div>
+      <div class="flex-item" style="flex-grow: 2;">Item 2</div>
+      <div class="flex-item" style="flex-grow: 1;">Item 3</div>
+    </div>
+  </div>
+
+  <!-- flex-shrink -->
+  <div class="section">
+    <h2>flex-shrink</h2>
+    <div class="flex-container" style="width: 300px;">
+      <div class="flex-item" style="flex-shrink: 1;">Item 1</div>
+      <div class="flex-item" style="flex-shrink: 2;">Item 2</div>
+      <div class="flex-item" style="flex-shrink: 1;">Item 3</div>
+    </div>
+  </div>
+
+  <!-- flex-basis -->
+  <div class="section">
+    <h2>flex-basis</h2>
+    <div class="flex-container">
+      <div class="flex-item" style="flex-basis: 100px;">Item 1</div>
+      <div class="flex-item" style="flex-basis: 150px;">Item 2</div>
+      <div class="flex-item" style="flex-basis: 100px;">Item 3</div>
+    </div>
+  </div>
+
+  <!-- order -->
+  <div class="section">
+    <h2>order</h2>
+    <div class="flex-container">
+      <div class="flex-item" style="order: 2;">Item 1</div>
+      <div class="flex-item" style="order: 1;">Item 2</div>
+      <div class="flex-item" style="order: 3;">Item 3</div>
+    </div>
+  </div>
+
+  <!-- align-self -->
+  <div class="section">
+    <h2>align-self: flex-end</h2>
+    <div class="flex-container" style="align-items: center; height: 150px;">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item" style="align-self: flex-end;">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </div>
+
+</body>
+</html>
