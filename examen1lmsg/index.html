@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Inicio - Jhon Anthony Quiliche Calderon</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Agregar jQuery -->
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./imagenes/iconolmsg.ico">
+
+    <script>
+        $(document).ready(function(){
+        // Funcion para cargar contenido con AJAX
+        function cargarContenido(url){
+            $.ajax({
+                url: url,
+                method: 'GET',
+                dataType: 'html',
+                success: function(data){
+                    $('#contenedor').html(data);
+                },
+                error: function(){
+                    $('#contenedor').html('Error al cargar el contenido');
+                }
+            });
+
+        }
+        // Manejar click en elementos del menu
+        $('nav li').on('click', function(){
+            var url = $(this).data('url'); // Obtener la URL del archivo a cargar
+             cargarContenido(url);// Cargar el contenido
+        });
+    
+        // Cargar contenido predeterminado al cargar la pagina
+        cargarContenido($('nav li').first().data('url'));
+    });
+    </script>
+</head>
+<body>
+        <header class="header">
+            <nav class="nav">
+                <ul class="barnav">
+                    <li class="menu" data-url="inicio.html"><a href="#">Inicio</a></li>
+                    <li class="menu" data-url="listaequipos.html"><a href="#">Equipos</a></li>
+                    <li class="menu" data-url="clasificacion.html"><a href="#">Clasificación</a></li>
+                    <li class="menu" data-url="multimedia.html"><a href="#">Multimedia</a></li>
+                </ul>
+                    <img class="logo_header" src="./imagenes/logolmsg.png" alt="logolmsg">
+        </nav>
+        </header>
+    
+    <section class="contenedor" id="contenedor">
+        <!-- El contenido cargado se mostrará aquí -->
+    </section>
+    
+
+<!--------- footer -------->
+<section id="footer-placeholder"></section>
+    
+</body>
+</html> 
