@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 22px;
+    line-height: 2;
+    background-color: black;
+    color: white;
+
+}
+
+.contenedor{
+    max-width: 960px;
+    margin: 100px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+}
+
+.parte{
+    background-color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;;
+    padding: 22px;
+    border: white 1px solid;
+}
